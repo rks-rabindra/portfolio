@@ -161,6 +161,7 @@
                 <textarea name="Message" required id="Message" cols="30" rows="5" placeholder="Your Message"></textarea>
                 <span id="msg">Request Submitted Sucessfully</span>
                 <span id="msg2">Please Wait Submitting....</span>
+                <span id="msg3">failed Please Call Directly</span>
                 <button id="btnres" type="submit">Submit</button>
             </form>
         </div>
@@ -197,13 +198,18 @@
             var Message = document.getElementById('Message').value;
             var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             console.log(Email.match(emailpattern))
-            if (Email.match(emailpattern) == null) {
+           try{
+            if(!navigator.onLine){
+                alert('Please Check your internate Activity')
+            }else{
+                if (Email.match(emailpattern) == null) {
                 alert('please fill proper Email id')
             } else {
                 if (Name !== '' && Email.match(emailpattern) !== null && Message !== '') {
-                    var url = 'https://script.google.com/macros/s/AKfycbyRie9GHqRuM3xN4F-8giPMsRa5TerLeZpfQQuvT2CWww8-VZ_dBc6uDP34pKARkGTGew/exec?'
-                    fetch(url + 'Name=' + Name + '&Email=' + Email + '&Message=' + Message)
-                    var elem = document.getElementById('msg2');
+                    var url = 'https://script.google.com/macros/s/AKfycbwjWYyAB827S8Ge5U4URlf-fymJwHe4-O-0WQKsQJ3idnJdpj75fWCXuAxXqOHcRXF0Zw/exec?'
+                    fetch(url + 'Name=' + Name + '&Email=' + Email + '&Message=' + Message).then((result) =>{
+                        if(result.ok == true){
+                            var elem = document.getElementById('msg2');
                     elem.style.display = 'block'
                     setTimeout(function () {
                             elem.style.display = 'none'
@@ -217,8 +223,18 @@
                     setTimeout(function () {
                         document.getElementById('msg').style.display = 'none'
                     }, 12000)
+                        }
+                        else{
+                            alert('Not Submitted , Please Try Again or Later')
+                        }
+                    })
+                    
                 }
             }
+            }
+           }catch(err){
+            document.getElementById('msg3').style.display = 'none'
+           }
         })
     </script>
     <script>
