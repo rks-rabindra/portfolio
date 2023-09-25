@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c64cf4433d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="user.png" type="image/png">
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <img src="logo.png">
+            <ul id="menulist">
+                <li><a href="#" onclick="closeMenu()">Home</a></li>
+                <li><a href="#aboutme" onclick="closeMenu()">About</a></li>
+                <li><a href="#servicepage" onclick="closeMenu()">Service</a></li>
+                <li><a href="#portfoliopage" onclick="closeMenu()">Portfolio</a></li>
+                <li><a href="#contactme" onclick="closeMenu()">Contact</a></li>
+                <i class="fa-solid fa-xmark" id="closeMenu" onclick="closeMenu()" ></i>
+            </ul>
+            <i class="fa-solid fa-bars" id="openMenu" onclick="openMenu()"></i>
+        </nav>
+        <div class="headText">
+            <h4>UX/UI</h4>
+            <h1>I am <span> Rabindra Sahoo </span><br> Programming Devlopper</h1>
+        </div>
+    </div>
+    <!-- ----------------About Me------------------ -->
+    <div id="aboutme">
+        <div class="amrow">
+            <div class="amimg">
+                <img src="user.png">
+            </div>
+            <div class="amcontent">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed doloremque amet laborum suscipit
+                    voluptatum quis? Hic eos eius ab ad, nisi, deserunt eveniet, vel omnis accusantium a voluptate ipsa.
+                    Commodi mollitia nesciunt asperiores quae minima obcaecati ab ut, odio minus maxime perferendis
+                    natus sequi? Libero velit aut officia tempore dolorem possimus aperiam sed id saepe rem non soluta
+                    cupiditate repellat quod odio voluptatibus, et veniam facilis? Quam fuga explicabo, perspiciatis
+                    officia nesciunt nulla odio quasi, iure, repellat debitis praesentium sequi dolores! Consequatur,
+                    dolores minima enim ullam eius autem a? Quam incidunt quas qui dicta, eveniet autem sunt hic ad
+                    delectus!</p>
+                <div class="amlinks">
+                    <ul>
+                        <li class="amlink active-links" onclick="selectLink('skill')"><a>Skills</a></li>
+                        <li class="amlink" onclick="selectLink('education')"><a>Education</a></li>
+                        <li class="amlink" onclick="selectLink('expertise')"><a>Experties</a></li>
+                    </ul>
+                    <div class="amdetail active-amdetail" id="skill">
+                        <p>HTML</p>
+                        <h4>HTML Designing and Websetup</h4>
+                        <p>CSS</p>
+                        <h4>CSS Designing and Accuracy of Formatting</h4>
+                        <p>Java Script</p>
+                        <h4>Setting of Backend GAS, and Web</h4>
+                    </div>
+                </div>
+                <div class="amdetail " id="education">
+                    <p>2010</p>
+                    <h4>SSL from Khirkona School</h4>
+                    <p>2012</p>
+                    <h4>PUC from Anantpur Collage</h4>
+                    <p>2017</p>
+                    <h4>Becom Gitam University</h4>
+                </div>
+                <div class="amdetail" id="expertise">
+                    <p>Google Appscript</p>
+                    <h4>Setting of Server and online Cloud</h4>
+                    <p>Google Cloud</p>
+                    <h4>Google Automation for Dashboard</h4>
+                    <p>Websites</p>
+                    <h4>Websites creation for Teams and Clients</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------- Services -------------------- -->
+    <div id="servicepage">
+        <h1>My Services</h1>
+        <div class="servicecon">
+            <div class="serCol">
+
+                <h4><i class="fa-brands fa-html5"></i> Web Design</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore est nihil quisquam consequuntur et
+                    beatae quidem placeat, ullam iusto eaque magnam quia at alias eveniet facilis totam cum sit
+                    voluptates.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="serCol">
+                <h4><i class="fa-brands fa-js"></i> Javascript</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore est nihil quisquam consequuntur et
+                    beatae quidem placeat, ullam iusto eaque magnam quia at alias eveniet facilis totam cum sit
+                    voluptates.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="serCol">
+                <h4><i class="fa-solid fa-code"></i> Google App Script</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore est nihil quisquam consequuntur et
+                    beatae quidem placeat, ullam iusto eaque magnam quia at alias eveniet facilis totam cum sit
+                    voluptates.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- --------------------- Portfolio --------------------- -->
+    <div id="portfoliopage">
+        <h1>Project List / Portfolio</h1>
+        <div class="ppcon">
+            <div class="ppcol">
+                <img src="work-1.png">
+                <div class="ppdes">
+                    <h4>Android App</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloremque fuga facere
+                        eveniet quos quia ad explicabo quis impedit in voluptatum.</p>
+                    <a href=""><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="ppcol">
+                <img src="work-2.png">
+                <div class="ppdes">
+                    <h4>Music App</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloremque fuga facere
+                        eveniet quos quia explicabo quis impedit asda in voluptatum.</p>
+                    <a href=""><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="ppcol">
+                <img src="work-3.png">
+                <div class="ppdes">
+                    <h4>Online Shopping App</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloremque fuga facere
+                        eveniet quos quia explicabo quis impedit in voluptatum sad.</p>
+                    <a href=""><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <button>See More</button>
+    </div>
+    <!-- --------------------------- Contact Me ------------------------- -->
+    <div id="contactme">
+        <div class="cmcol1">
+            <h2>Contact Me</h2>
+            <p> <i class="fa-solid fa-envelope"></i> it@marutiflex.com</p>
+            <p> <i class="fa-solid fa-square-phone"></i> 9845411959</p>
+            <div class="social_link">
+                <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i
+                    class="fa-brands fa-square-twitter"></i> <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="cmcol2" id="myForm">
+            <form action="#contactme">
+                <input type="text" name="Name" required id="Name" placeholder="Your Name">
+                <input type="email" name="Email" required id="Email" placeholder="Your Email ID">
+                <textarea name="Message" required id="Message" cols="30" rows="5" placeholder="Your Message"></textarea>
+                <span id="msg">Request Submitted Sucessfully</span>
+                <span id="msg2">Please Wait Submitting....</span>
+                <button id="btnres" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-solid fa-copyright"></i> Reserved by <b>rks-rabindra Repository</b></p>
+    </div>
+
+    <script>
+        var amlinks = document.getElementsByClassName('amlink');
+        var amdetails = document.getElementsByClassName('amdetail');
+        function selectLink(clicked) {
+            for (amlink of amlinks) {
+                amlink.classList.remove('active-links')
+            }
+            for (amdetail of amdetails) {
+                amdetail.classList.remove('active-amdetail')
+            }
+            document.getElementById(clicked).className = 'amdetail active-amdetail'
+            event.currentTarget.classList.add('active-links')
+        }
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('myForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+            });
+        });
+        document.getElementById('btnres').addEventListener('click', function () {
+            var Name = document.getElementById('Name').value;
+            var Email = document.getElementById('Email').value;
+            var Message = document.getElementById('Message').value;
+            var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            console.log(Email.match(emailpattern))
+            if (Email.match(emailpattern) == null) {
+                alert('please fill proper Email id')
+            } else {
+                if (Name !== '' && Email.match(emailpattern) !== null && Message !== '') {
+                    var url = 'https://script.google.com/macros/s/AKfycbyRie9GHqRuM3xN4F-8giPMsRa5TerLeZpfQQuvT2CWww8-VZ_dBc6uDP34pKARkGTGew/exec?'
+                    fetch(url + 'Name=' + Name + '&Email=' + Email + '&Message=' + Message)
+                    var elem = document.getElementById('msg2');
+                    elem.style.display = 'block'
+                    setTimeout(function () {
+                            elem.style.display = 'none'
+                            document.getElementById('msg').style.display = 'block'
+                            document.getElementById('Name').value='';
+                            document.getElementById('Email').value='';
+                            document.getElementById('Message').value='';
+                    
+                    }, 7000
+                    )
+                    setTimeout(function () {
+                        document.getElementById('msg').style.display = 'none'
+                    }, 12000)
+                }
+            }
+        })
+    </script>
+    <script>
+        function openMenu(){
+            document.getElementById('menulist').style.right = 0;
+            document.body.style.overflow = 'hidden'
+        }
+        function closeMenu(){
+            document.body.style.overflow = 'scroll'
+            document.getElementById('menulist').style.right = "-150px";
+        }
+    </script>
+    
+
+
+</body>
+
+</html>
